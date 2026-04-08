@@ -36,4 +36,38 @@ Ein einfaches Python-Beispielprojekt zur Demonstration von Markdown auf GitHub.
 ---
 
 ## Project Structure
+# Projekt erstellen
+mkdir markdownexample
+cd markdownexample
 
+# Ordnerstruktur erstellen
+mkdir app
+mkdir app/routers
+mkdir app/models
+mkdir app/schemas
+
+# Dateien erstellen
+touch app/main.py
+touch app/routers/__init__.py
+touch app/models/__init__.py
+touch app/schemas/__init__.py
+touch requirements.txt
+touch README.md
+
+# Git initialisieren
+git init
+
+# Dateien hinzufügen
+git add .
+
+# Commit erstellen
+git commit -m "Initial commit"
+
+# GitHub Repo erstellen (vorher auf GitHub anlegen!)
+git remote add origin https://github.com/DEIN_USERNAME/markdownexample.git
+
+# Branch setzen
+git branch -M main
+
+# Hochladen
+git push -u origin main
