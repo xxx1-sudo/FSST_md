@@ -1,15 +1,14 @@
 # Velox API
 
-*A lightweight REST API built with FastAPI*
+**A lightweight REST API built with FastAPI**
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green)
-![License](https://img.shields.io/badge/License-MIT-purple)
+![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python)
+![FastAPI 0.111](https://img.shields.io/badge/FastAPI-0.111-009688?logo=fastapi)
+![License MIT](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-A minimal REST API for user authentication and resource management.  
-No unnecessary dependencies, no bloat.
+A minimal REST API for user authentication and resource management. No unnecessary dependencies, no bloat.
 
 ## Installation
 
@@ -18,17 +17,31 @@ git clone https://github.com/yourname/velox-api.git
 cd velox-api
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+```
 
+API runs at `http://localhost:8000` · Docs at `/docs`
+
+## Endpoints
+
+| Method | Endpoint      | Description       |
+|--------|---------------|-------------------|
+| POST   | `/auth/login` | Obtain JWT token  |
+| GET    | `/users/me`   | Get current user  |
+| GET    | `/items/{id}` | Retrieve item     |
+| POST   | `/items`      | Create item       |
+
+## Project Structure
+
+```
 velox-api/
 ├── app/
-│   ├── main.py        # Entry point
-│   ├── routers/       # Route definitions
-│   ├── models/        # Database models
-│   └── schemas/       # Pydantic schemas
+│   ├── main.py          # Entry point
+│   ├── routers/         # Route definitions
+│   ├── models/          # Database models
+│   └── schemas/         # Pydantic schemas
 └── requirements.txt
+```
 
+## Contributing
 
-Wenn du willst, kann ich dir auch noch:
-- Badges exakt wie im Screenshot stylen (inkl. Icons)
-- ein Logo/Header hinzufügen
-- oder das README “GitHub-fancy” mit zentriertem Titel bauen 👍
+Fork → branch → commit → pull request. Issues welcome.
